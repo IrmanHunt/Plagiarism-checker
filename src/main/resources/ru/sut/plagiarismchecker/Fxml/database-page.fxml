@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="523.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sut.plagiarismchecker.Controllers.DatabasePageController">
+   <children>
+      <VBox layoutX="28.0" layoutY="57.0" prefHeight="452.0" prefWidth="470.0">
+         <children>
+            <TextArea fx:id="textArea" prefHeight="272.0" prefWidth="470.0" wrapText="true" />
+            <HBox prefHeight="199.0" prefWidth="470.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="289.0">
+                     <children>
+                        <ListView fx:id="tablesListView" prefHeight="100.0" prefWidth="321.0" />
+                        <TextField fx:id="tableTextField" promptText="Таблица" />
+                        <Button mnemonicParsing="false" onAction="#addTableButton" prefHeight="25.0" prefWidth="244.0" text="Добавить" />
+                        <Button mnemonicParsing="false" onAction="#deleteTableButton" prefHeight="25.0" prefWidth="244.0" text="Удалить" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="278.0">
+                     <children>
+                        <ListView fx:id="textsListView" prefHeight="125.0" prefWidth="230.0" />
+                        <TextField fx:id="textNameTextFieldId" disable="true" promptText="Название текста" />
+                        <Button mnemonicParsing="false" onAction="#deleteTextButton" prefHeight="25.0" prefWidth="244.0" text="Удалить" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="databaseLabel" layoutX="28.0" layoutY="28.0" prefHeight="25.0" prefWidth="470.0" />
+   </children>
+</AnchorPane>

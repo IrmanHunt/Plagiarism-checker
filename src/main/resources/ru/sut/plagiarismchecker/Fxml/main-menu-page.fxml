@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.sut.plagiarismchecker.Controllers.MainMenuPageController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadMenuItem" text="Загрузить (txt, pdf)" />
+                  <MenuItem mnemonicParsing="false" onAction="#showDatabase" text="База данных" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Выход" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox layoutX="23.0" layoutY="47.0" prefHeight="452.0" prefWidth="348.0">
+         <children>
+            <HBox prefHeight="14.0" prefWidth="326.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="258.0" text="Текст:" />
+                  <Label fx:id="symbolsLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="266.0" text="0 символов" />
+               </children>
+            </HBox>
+            <TextArea fx:id="textArea" prefHeight="190.0" prefWidth="341.0" wrapText="true" />
+            <Button fx:id="loadTextButtonId" mnemonicParsing="false" onAction="#loadTextButton" prefHeight="25.0" prefWidth="353.0" text="Загрузить (txt, pdf)" />
+            <TextField fx:id="textNameField" promptText="Название" />
+            <TextField fx:id="authorsField" promptText="Авторы" />
+            <TextArea fx:id="commentField" prefHeight="115.0" prefWidth="326.0" promptText="Комментарий" />
+            <HBox prefHeight="25.0" prefWidth="326.0">
+               <children>
+                  <ComboBox fx:id="tablesComboBoxId" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="184.0" promptText="Таблица" />
+                  <Button mnemonicParsing="false" onAction="#saveTextButton" prefHeight="25.0" prefWidth="195.0" text="Сохранить" />
+               </children>
+            </HBox>
+            <HBox prefHeight="23.0" prefWidth="326.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#checkButton" prefHeight="25.0" prefWidth="179.0" text="Проверить" />
+                  <Button mnemonicParsing="false" onAction="#cleanButton" prefHeight="25.0" prefWidth="190.0" text="Очистить" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="420.0" layoutY="65.0" prefHeight="452.0" prefWidth="333.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="333.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="269.0" text="Процент оригинальности:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="originalityPercentLabel" alignment="CENTER" prefHeight="62.0" prefWidth="121.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefHeight="10.0" prefWidth="333.0" />
+            <Label prefHeight="39.0" prefWidth="333.0" text="Заимствования:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="borrowingsListView" prefHeight="264.0" prefWidth="333.0" />
+            <Label fx:id="percentLabel" prefHeight="48.0" prefWidth="342.0" text="Процент схожести: 0% и выше">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Slider fx:id="percentSlider" blockIncrement="5.0" minorTickCount="4" prefHeight="0.0" prefWidth="333.0" showTickLabels="true" showTickMarks="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Slider>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

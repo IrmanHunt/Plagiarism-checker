@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"ru.sut.plagiarismchecker","l":"ru.sut.plagiarismchecker"},{"m":"ru.sut.plagiarismchecker","l":"ru.sut.plagiarismchecker.Controllers"},{"m":"ru.sut.plagiarismchecker","l":"ru.sut.plagiarismchecker.Models"}];updateSearchResults();

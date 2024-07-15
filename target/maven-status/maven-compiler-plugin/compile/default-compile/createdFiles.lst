@@ -1,0 +1,10 @@
+ru\sut\plagiarismchecker\MainLauncher.class
+ru\sut\plagiarismchecker\Models\TextDao.class
+ru\sut\plagiarismchecker\Controllers\MainMenuPageController.class
+ru\sut\plagiarismchecker\Main.class
+ru\sut\plagiarismchecker\PlagiarismChecker.class
+ru\sut\plagiarismchecker\Models\Text.class
+module-info.class
+ru\sut\plagiarismchecker\Controllers\MainMenuPageController$SimilarityComparator.class
+ru\sut\plagiarismchecker\Controllers\DatabasePageController.class
+ru\sut\plagiarismchecker\DatabaseConnection.class
